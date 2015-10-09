@@ -27,3 +27,34 @@ Nexus 的默认Jar包等工程上传路径为 `../sonatype-work/nexus`。如果�
 
 `nexus.properties` 文件中的 `application-port` 和 `application-host` 条目。
 
+##  使用
+
+###  通过命令行上传文件
+
+修改 Maven 安装目录的配置文件 `settings.xml`，添加 Nexus 的用户名和密码
+
+``` xml
+<servers>
+    <server>
+        <id>nexus</id>
+        <username>nexus username</username>
+    	<password>nexus password</password>
+    </server>
+</servers>
+```
+
+在命令行中执行以下命令进行上传，`VERSION` 以 `-SNAPSHOT` 结尾必须指定为 SNAPSHOT 仓库。
+
+```bash
+mvn deploy:deploy-file -Durl=http://localhost:8081/nexus/content/repositories/snapshots/ \
+-DrepositoryId=nexus \
+-DgroupId=com.bookislife \
+-DartifactId=sauce-core \
+-Dversion=0.0.1-SNAPSHOT \
+-Dpackaging=jar \
+-DgeneratePom=true  \
+-Dfile=../deploy/snapshot/sauce-core-v0.0.1.jar
+```
+
+- `repositoryId` 需要对应 `settings.xml` 中配置的 `<id>`。
+
