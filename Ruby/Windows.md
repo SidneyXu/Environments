@@ -40,7 +40,7 @@
 
 ```bash
 gem sources --remove https://rubygems.org/
-gem sources -a http://ruby.taobao.org/
+gem sources -a https://ruby.taobao.org/
 ```
 
 然后执行 `gem sources -l` 检查是否只有淘宝源一个，如果还有其它源的话继续执行以上命令删除其它源。
@@ -49,7 +49,7 @@ gem sources -a http://ruby.taobao.org/
 
 两种方法
 
-第一种，修改 Gemfile 文件，将 `source 'http://rubygems.org'` 替换为 `source 'http://ruby.taobao.org'`。
+第一种，修改 Gemfile 文件，将 `source 'http://rubygems.org'` 替换为 `source 'https://ruby.taobao.org'`。
 
 第二种，安装前执行 `bundle config mirror.https://rubygems.org https://ruby.taobao.org`。
 
