@@ -30,9 +30,7 @@ sudo yum install -y mongodb-org
 
 - 配置文件：`/etc/mongod.con`
 
-
 - 数据文件：`/var/lib/mongo`
-
 
 - 日志文件：`/var/log/mongodb`
 
