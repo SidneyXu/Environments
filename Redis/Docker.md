@@ -19,6 +19,6 @@ docker run --name myredis -p 6379:6379 -d redis:3.0.5
 其它应用连接 Redis 服务器容器
 
 ```bash
-docker run -link myredis -ti centos:7 /bin/bash
+docker run --link myredis -ti centos:7 /bin/bash
 ```
 
