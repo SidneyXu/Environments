@@ -148,6 +148,9 @@ java -cp zookeeper.jar:log4j.jar:conf org.apache.zookeeper.server.PurgeTxnLog <d
 
 1. 建立完毕后可以通过 `crontab -l` 查看当前所有定时任务。
 
+## 参考资料
+
+- [ZooKeeper Getting Started Guide](https://zookeeper.apache.org/doc/trunk/zookeeperStarted.html)
 
 
 
